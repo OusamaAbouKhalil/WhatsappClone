@@ -12,7 +12,10 @@
         android:theme="@style/Theme.WhatsappClone"
         tools:targetApi="31">
         <activity
-            android:name=".Login"
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomePage"
             android:exported="true"
             android:label="Whatsapp Clone"
             android:theme="@style/Theme.WhatsappClone.NoActionBar">
@@ -22,14 +25,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUp_Activity"
-            android:exported="true">
-        </activity>
+        <activity
+            android:name=".Group_Chat"
+            android:exported="false" />
+        <activity
+            android:name=".ChatDetails"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true"
+            android:label="Whatsapp Clone"
+            android:theme="@style/Theme.WhatsappClone.NoActionBar"></activity>
+        <activity
+            android:name=".SignUp_Activity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.WhatsappClone">
-        </activity>
+            android:theme="@style/Theme.WhatsappClone" />
     </application>
 
 </manifest>

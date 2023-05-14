@@ -9,14 +9,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.whatsappclone.Models.User;
+import com.example.whatsappclone.Models.Users;
 import com.example.whatsappclone.databinding.ActivitySignUpBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.ktx.Firebase;
 
 public class SignUp_Activity extends AppCompatActivity {
 
@@ -56,9 +55,9 @@ public class SignUp_Activity extends AppCompatActivity {
 
                             if(task.isSuccessful()){
 
-                                User user = new User(binding.txtUserName.getText().toString(),binding.txtEmail.getText().toString(),binding.txtPassword.getText().toString());
+                                Users users = new Users(binding.txtUserName.getText().toString(),binding.txtEmail.getText().toString(),binding.txtPassword.getText().toString());
                                 String id = task.getResult().getUser().getUid();
-                                database.getReference().child("User").child(id).setValue(user);
+                                database.getReference().child("User").child(id).setValue(users);
                                 Toast.makeText(SignUp_Activity.this, "Sign Up Successfully", Toast.LENGTH_SHORT).show();
 
                             }

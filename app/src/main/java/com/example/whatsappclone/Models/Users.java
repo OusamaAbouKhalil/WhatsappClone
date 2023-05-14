@@ -1,14 +1,17 @@
 package com.example.whatsappclone.Models;
 
-public class User {
+public class Users {
 
-    private String username,email,password,userId,lastMessage,status;
+    private String profilePic,username,email,password,userId,lastMessage,status;
 
-    public User(){
+    public Users(){
 
     }
 
-    public User(String username, String email, String password, String userId, String lastMessage, String status) {
+
+
+    public Users(String profilePic, String username, String email, String password, String userId, String lastMessage, String status) {
+        this.profilePic = profilePic;
         this.username = username;
         this.email = email;
         this.password = password;
@@ -17,7 +20,7 @@ public class User {
         this.status = status;
     }
 
-    public User(String username, String email, String password) {
+    public Users(String username, String email, String password) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -70,6 +73,14 @@ public class User {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
     }
 
 

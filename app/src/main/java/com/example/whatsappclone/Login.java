@@ -1,6 +1,5 @@
 package com.example.whatsappclone;
 
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +9,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.whatsappclone.Models.User;
 import com.example.whatsappclone.databinding.ActivityLoginBinding;
-import com.example.whatsappclone.databinding.ActivitySignUpBinding;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -26,6 +24,8 @@ public class Login extends AppCompatActivity {
     FirebaseDatabase database;
     ProgressDialog progressDialog;
 
+    GoogleSignInClient mGoogleSignInClient;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +38,6 @@ public class Login extends AppCompatActivity {
         progressDialog = new ProgressDialog(Login.this);
         progressDialog.setTitle("Logging in to Your Account");
         progressDialog.setMessage("Please Wait,\n Validation In progress");
-
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,8 +55,9 @@ public class Login extends AppCompatActivity {
                                     if(task.isSuccessful()){
 
                                         Intent intent = new Intent(Login.this,MainActivity.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
-
+                                        finish();
                                     }else{
                                         Toast.makeText(Login.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                                     }
@@ -71,9 +71,12 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        // Check if user is already logged in
         if(mAuth.getCurrentUser() != null){
             Intent intent = new Intent(Login.this,MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
+            finish();
         }
 
         binding.SignUp.setOnClickListener(new View.OnClickListener() {
