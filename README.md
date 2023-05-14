@@ -5,3 +5,4 @@ In addition, Firebase's cloud storage feature can be used to enable users to sha
 
 Firebase's user authentication feature can also be used to enable users to sign up and log in securely to the app. This helps to protect user data and ensure that only authorized users can access the app's features.
 
+![welcomePage](https://github.com/OusamaAbouKhalil/WhatsappClone/assets/131563820/abd98608-31a4-436d-8b78-1f58a0c9da2e)
