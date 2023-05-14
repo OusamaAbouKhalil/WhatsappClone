@@ -11,6 +11,10 @@ Main Page :
 
 ![MainPage](https://github.com/OusamaAbouKhalil/WhatsappClone/assets/131563820/d2280398-4bbb-46fa-8f9d-e45e492fc4c6)
 
-Chat Page:
+Chat Page :
 
 ![Chat](https://github.com/OusamaAbouKhalil/WhatsappClone/assets/131563820/c35dade8-7d0d-4829-bbd6-18d99fccaae3)
+
+Group Chat : 
+
+![Group Chat](https://github.com/OusamaAbouKhalil/WhatsappClone/assets/131563820/a7b0b815-b0e9-40c6-a05f-6697bf0819bb)
