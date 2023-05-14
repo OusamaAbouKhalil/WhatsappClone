@@ -4,3 +4,4 @@ An app built with Firebase can have a wide range of features, including real-tim
 In addition, Firebase's cloud storage feature can be used to enable users to share files with each other, such as photos, videos, and documents. This feature can be particularly useful for businesses and organizations that need to share files securely and easily.
 
 Firebase's user authentication feature can also be used to enable users to sign up and log in securely to the app. This helps to protect user data and ensure that only authorized users can access the app's features.
+https://github.com/OusamaAbouKhalil/WhatsappClone/issues/1#issue-1708958996
