@@ -10,3 +10,7 @@ Firebase's user authentication feature can also be used to enable users to sign 
 Main Page :
 
 ![MainPage](https://github.com/OusamaAbouKhalil/WhatsappClone/assets/131563820/d2280398-4bbb-46fa-8f9d-e45e492fc4c6)
+
+Chat Page:
+
+![Chat](https://github.com/OusamaAbouKhalil/WhatsappClone/assets/131563820/c35dade8-7d0d-4829-bbd6-18d99fccaae3)
